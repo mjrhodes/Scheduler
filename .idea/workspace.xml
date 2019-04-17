@@ -3,8 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="9d762532-e4c1-47cd-a274-92eae92b51d9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../Scheduler/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Scheduler/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Scheduler/src/components/Button.js" beforeDir="false" afterPath="$PROJECT_DIR$/../Scheduler/src/components/Button.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Scheduler/src/components/Schedule.js" beforeDir="false" afterPath="$PROJECT_DIR$/../Scheduler/src/components/Schedule.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Scheduler/src/css/Schedule.css" beforeDir="false" afterPath="$PROJECT_DIR$/../Scheduler/src/css/Schedule.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Scheduler/src/js/Scheduler.js" beforeDir="false" afterPath="$PROJECT_DIR$/../Scheduler/src/js/Scheduler.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -42,8 +42,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../Scheduler/src/components/Schedule.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="29" column="40" selection-start-line="29" selection-start-column="40" selection-end-line="29" selection-end-column="40" />
+            <state relative-caret-position="205">
+              <caret line="30" column="36" selection-start-line="30" selection-start-column="36" selection-end-line="30" selection-end-column="36" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -54,8 +54,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../Scheduler/src/css/Schedule.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="19" column="21" lean-forward="true" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="21" />
+            <state relative-caret-position="435">
+              <caret line="29" column="17" lean-forward="true" selection-start-line="29" selection-start-column="17" selection-end-line="29" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -84,8 +84,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../Scheduler/src/js/Scheduler.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" column="36" selection-start-line="15" selection-start-column="36" selection-end-line="15" selection-end-column="36" />
+            <state relative-caret-position="180">
+              <caret line="12" column="84" selection-start-line="12" selection-start-column="84" selection-end-line="12" selection-end-column="84" />
             </state>
           </provider>
         </entry>
@@ -124,13 +124,13 @@
         <option value="$PROJECT_DIR$/../Scheduler/src/components/Buttons.js" />
         <option value="$PROJECT_DIR$/../Scheduler/src/index.js" />
         <option value="$PROJECT_DIR$/../Scheduler/public/index.html" />
-        <option value="$PROJECT_DIR$/../Scheduler/src/css/Schedule.css" />
         <option value="$PROJECT_DIR$/../Scheduler/src/css/Button.css" />
         <option value="$PROJECT_DIR$/../Scheduler/src/App.js" />
         <option value="$PROJECT_DIR$/../Scheduler/src/css/App.css" />
         <option value="$PROJECT_DIR$/../Scheduler/src/js/Test.js" />
-        <option value="$PROJECT_DIR$/../Scheduler/src/js/Scheduler.js" />
         <option value="$PROJECT_DIR$/../Scheduler/src/components/Button.js" />
+        <option value="$PROJECT_DIR$/../Scheduler/src/css/Schedule.css" />
+        <option value="$PROJECT_DIR$/../Scheduler/src/js/Scheduler.js" />
         <option value="$PROJECT_DIR$/../Scheduler/src/components/Schedule.js" />
       </list>
     </option>
@@ -244,7 +244,7 @@
       <option name="presentableId" value="Default" />
       <updated>1555459903838</updated>
       <workItem from="1555459905245" duration="172000" />
-      <workItem from="1555460163565" duration="29098000" />
+      <workItem from="1555460163565" duration="30845000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <created>1555492465692</created>
@@ -253,11 +253,18 @@
       <option name="project" value="LOCAL" />
       <updated>1555492465692</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Color time slots appropriately">
+      <created>1555493776113</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1555493776113</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29270000" />
+    <option name="totallyTimeSpent" value="31017000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1259" height="1417" extended-state="0" />
@@ -291,7 +298,8 @@
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
     <MESSAGE value="Initial Commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial Commit" />
+    <MESSAGE value="Color time slots appropriately" />
+    <option name="LAST_COMMIT_MESSAGE" value="Color time slots appropriately" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/../Scheduler/src/logo.svg">
@@ -341,13 +349,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../Scheduler/src/css/App.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="615">
-          <caret line="41" column="13" selection-start-line="41" selection-start-column="13" selection-end-line="41" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../Scheduler/src/css/Button.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
@@ -362,13 +363,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../Scheduler/src/js/Scheduler.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="36" selection-start-line="15" selection-start-column="36" selection-end-line="15" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../Scheduler/src/components/Button.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
@@ -376,13 +370,6 @@
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Scheduler/src/css/Schedule.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="21" lean-forward="true" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="21" />
         </state>
       </provider>
     </entry>
@@ -396,10 +383,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../Scheduler/src/components/Schedule.js">
+    <entry file="file://$PROJECT_DIR$/../Scheduler/src/css/App.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="615">
+          <caret line="41" column="13" selection-start-line="41" selection-start-column="13" selection-end-line="41" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Scheduler/src/css/Schedule.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="435">
-          <caret line="29" column="40" selection-start-line="29" selection-start-column="40" selection-end-line="29" selection-end-column="40" />
+          <caret line="29" column="17" lean-forward="true" selection-start-line="29" selection-start-column="17" selection-end-line="29" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Scheduler/src/js/Scheduler.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="84" selection-start-line="12" selection-start-column="84" selection-end-line="12" selection-end-column="84" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Scheduler/src/components/Schedule.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="205">
+          <caret line="30" column="36" selection-start-line="30" selection-start-column="36" selection-end-line="30" selection-end-column="36" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>

@@ -13,7 +13,7 @@
 }
 
 .timeSlot {
-    height: 40px;
+    height:30px;
     width: 100%;
     float: left;
     background-color: white;
@@ -27,7 +27,7 @@
 }
 
 .label {
-    height: 40px;
+    height: 30px;
     margin-top: -1px;
     border-top: #7B93DB 1px dotted;
     border-bottom: #7B93DB 1px dotted;
