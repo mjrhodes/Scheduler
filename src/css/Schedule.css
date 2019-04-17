@@ -6,6 +6,7 @@
 .day ul {
     list-style: none;
     padding: 0;
+    text-align: right;
 }
 
 .day h4 {

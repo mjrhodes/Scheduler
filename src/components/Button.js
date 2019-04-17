@@ -9,6 +9,9 @@ class Button extends React.Component {
             .setAttribute("class", "enabled");
         document.getElementById("setUnavailableButton").setAttribute("class", "disabled");
         document.getElementById("setScheduledButton").setAttribute("class", "disabled");
+        document.getElementById("clearButton").setAttribute("class", "disabled");
+        document.getElementById("topPanel").setAttribute("style", "visibility: hidden");
+        document.getElementById("modeDiv").setAttribute("style", "visibility: hidden");
         Scheduler.currentSchedule = "work";
     }
 
@@ -16,6 +19,9 @@ class Button extends React.Component {
         e.target.setAttribute("class", "disabled");
         document.getElementById("workScheduleButton").setAttribute("class", "enabled");
         document.getElementById("setScheduledButton").setAttribute("class", "enabled");
+        document.getElementById("clearButton").setAttribute("class", "enabled");
+        document.getElementById("topPanel").setAttribute("style", "visibility: visible");
+        document.getElementById("modeDiv").setAttribute("style", "visibility: visible");
         Scheduler.mode = "markUnavailable";
         Scheduler.currentSchedule = "employees";
     }
@@ -38,6 +44,7 @@ class Button extends React.Component {
             element.setAttribute("style","background-color: white");
         }
 
+        //TODO: change to clear employee's schedule as well
         for (let day in Scheduler.days) {
             for (let i = 0; i < Scheduler.days[day].length; i++) {
                 Scheduler.days[day][i] = 0;

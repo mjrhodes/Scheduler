@@ -4,7 +4,7 @@ import Scheduler from "../js/Scheduler.js";
 
 class TimeSlot extends React.Component {
     handleMouseDown(e) {
-        if (Scheduler.currentSchedule === "employees") {
+        if (Scheduler.currentSchedule === "employees" && Scheduler.selectedIndex != -1) {
             let day = e.target.getAttribute("day");
             let index = e.target.getAttribute("index");
             Scheduler.currentlyModifying = day;

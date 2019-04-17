@@ -1,5 +1,5 @@
 button {
-    background-color: #21387B; /* Green */
+    background-color: #21387B;
     width: 240px;
     border: none;
     color: white;
@@ -24,5 +24,6 @@ button {
 }
 
 #clearButton {
+    margin-top: 20px;
     float:right;
 }
