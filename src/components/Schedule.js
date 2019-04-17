@@ -1,49 +1,49 @@
 import React from 'react';
 import "../css/Schedule.css";
-import scheduler from "../js/Scheduler.js"
+import Scheduler from "../js/Scheduler.js";
 
 class TimeSlot extends React.Component {
     handleMouseDown(e) {
-        let day = e.target.getAttribute("day");
-        let index = e.target.getAttribute("index");
-        scheduler.currentlyModifying = day;
+        if (Scheduler.currentSchedule === "employees") {
+            let day = e.target.getAttribute("day");
+            let index = e.target.getAttribute("index");
+            Scheduler.currentlyModifying = day;
 
-        if (scheduler.days[day][index] === 0) {
-            scheduler.mode = "markUnavailable";
-        } else if (scheduler.days[day][index] === 2) {
-            scheduler.mode = "markBlank";
+            if (Scheduler.days[day][index] === 1 && Scheduler.mode === "markScheduled") {
+                Scheduler.mode = "markBlank";
+            } else if (Scheduler.days[day][index] === 2 && Scheduler.mode === "markUnavailable") {
+                Scheduler.mode = "markBlank";
+            }
+
+            TimeSlot.toggleTimeSlot(e);
+            Scheduler.mouseDragging = true;
         }
-
-        TimeSlot.toggleTimeSlot(e);
-        scheduler.mouseDragging = true;
     }
 
     handleMouseOver(e) {
-        if (scheduler.mouseDragging) {
+        if (Scheduler.mouseDragging) {
             TimeSlot.toggleTimeSlot(e);
         }
     }
 
     handleMouseUp(e) {
-        scheduler.mouseDragging = false;
-        console.log();
-        console.log(scheduler.days);
+        Scheduler.mouseDragging = false;
     }
 
     static toggleTimeSlot(e) {
         let day = e.target.getAttribute("day");
         let index = e.target.getAttribute("index");
 
-        if (day === scheduler.currentlyModifying) {
-            if (scheduler.mode === "markUnavailable") {
+        if (day === Scheduler.currentlyModifying) {
+            if (Scheduler.mode === "markUnavailable") {
                 e.target.setAttribute("style", "background-color: red");
-                scheduler.days[day][index] = 2;
-            } else if (scheduler.mode === "markScheduled") {
+                Scheduler.days[day][index] = 2;
+            } else if (Scheduler.mode === "markScheduled") {
                 e.target.setAttribute("style", "background-color: green");
-                scheduler.days[day][index] = 1;
-            } else if (scheduler.mode === "markBlank") {
+                Scheduler.days[day][index] = 1;
+            } else if (Scheduler.mode === "markBlank") {
                 e.target.setAttribute("style", "background-color: white");
-                scheduler.days[day][index] = 0;
+                Scheduler.days[day][index] = 0;
             }
         }
     }

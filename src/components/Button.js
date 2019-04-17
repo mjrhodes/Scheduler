@@ -1,6 +1,6 @@
 import React from "react";
 import "../css/Button.css";
-import scheduler from "../js/Scheduler";
+import Scheduler from "../js/Scheduler";
 
 class Button extends React.Component {
     static pressWorkSchedule(e) {
@@ -9,26 +9,27 @@ class Button extends React.Component {
             .setAttribute("class", "enabled");
         document.getElementById("setUnavailableButton").setAttribute("class", "disabled");
         document.getElementById("setScheduledButton").setAttribute("class", "disabled");
+        Scheduler.currentSchedule = "work";
     }
 
     static pressEmployeeSchedules(e) {
         e.target.setAttribute("class", "disabled");
         document.getElementById("workScheduleButton").setAttribute("class", "enabled");
         document.getElementById("setScheduledButton").setAttribute("class", "enabled");
-        scheduler.mode = "markUnavailable";
+        Scheduler.mode = "markUnavailable";
+        Scheduler.currentSchedule = "employees";
     }
 
     static pressSetUnavailable(e) {
         e.target.setAttribute("class", "disabled");
         document.getElementById("setScheduledButton").setAttribute("class", "enabled");
-        scheduler.mode = "markUnavailable";
+        Scheduler.mode = "markUnavailable";
     }
 
     static pressSetScheduled(e) {
         e.target.setAttribute("class", "disabled");
         document.getElementById("setUnavailableButton").setAttribute("class", "enabled");
-        scheduler.mode = "markScheduled";
-        alert(scheduler.mode);
+        Scheduler.mode = "markScheduled";
     }
 
     handleClick(e) {
