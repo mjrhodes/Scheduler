@@ -28,7 +28,6 @@ class TimeSlot extends React.Component {
 
     handleMouseUp(e) {
         Scheduler.mouseDragging = false;
-        console.log(Scheduler.days);
     }
 
     static toggleTimeSlot(e) {
@@ -84,7 +83,6 @@ class Schedule extends React.Component {
             "1:00-1:30", "1:30-2:00", "2:00-2:30", "2:30-3:00", "3:00-3:30", "3:30-4:00", "4:00-4:30", "4:30-5:00",
             "5:00-5:30", "5:30-6:00", "6:00-6:30", "6:30-7:00", "7:00-7:30", "7:30-8:00", "8:00-8:30", "8:30-9:00",
             "9:00-9:30", "9:30-10:00"];
-        const days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
         const labels = times.map((label, i) => <li className="label" key={"label_"+i}><h3>{label}</h3></li>);
 
         return (

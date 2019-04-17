@@ -12,7 +12,7 @@ class App extends Component {
         </header>
         <div className="App-body">
           <div className="top-panel">
-            Top
+            <Button id="clearButton" className="enabled" name="Clear Schedule"/>
           </div>
 
           <div className="main">

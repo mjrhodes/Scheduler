@@ -32,6 +32,19 @@ class Button extends React.Component {
         Scheduler.mode = "markScheduled";
     }
 
+    static pressClear(e) {
+        let elements = document.getElementsByClassName("timeSlot");
+        for (let element of elements) {
+            element.setAttribute("style","background-color: white");
+        }
+
+        for (let day in Scheduler.days) {
+            for (let i = 0; i < Scheduler.days[day].length; i++) {
+                Scheduler.days[day][i] = 0;
+            }
+        }
+    }
+
     handleClick(e) {
         if (e.target.getAttribute("class") === "enabled") {
             switch (e.target.getAttribute("name")) {
@@ -46,6 +59,9 @@ class Button extends React.Component {
                     break;
                 case "Set Scheduled":
                     Button.pressSetScheduled(e);
+                    break;
+                case "Clear Schedule":
+                    Button.pressClear(e);
                     break;
             }
         }

@@ -22,3 +22,7 @@ button {
     opacity: 0.6;
     pointer-events: none;
 }
+
+#clearButton {
+    float:right;
+}
