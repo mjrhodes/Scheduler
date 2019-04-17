@@ -1,0 +1,65 @@
+/*
+Color Scheme
+tint:   #7B93DB
+base:   #3054BF
+shade:  #21387B
+
+ */
+
+* {
+  margin: 0;
+  /*border: #000000 1px dashed;*/
+}
+
+.App {
+  text-align: center;
+}
+
+.App-header {
+  background-color: #21387B;
+  min-height: 10vh;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  padding-left: 20px;
+}
+
+.top-panel {grid-area: top;}
+
+.corner {grid-area: corner;}
+
+.main {
+  grid-area: main;
+  border: black 2px solid;
+  padding: 5px;
+  background-color: #7B93DB;
+}
+.right-panel {
+  grid-area: right;
+  padding: 0;
+}
+
+.App-body {
+  display: grid;
+  grid-template-areas:
+          'top top top top top top top corner'
+          'main main main main main main main right';
+  grid-gap: 10px;
+  padding: 10px;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.buttons {
+  width: 100%;
+  display: block;
+}
+
+#modeLabel {
+  margin-top: 50px;
+}
