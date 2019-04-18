@@ -14,12 +14,18 @@ class Button extends React.Component {
         document.getElementById("topPanel").setAttribute("style", "visibility: hidden");
         document.getElementById("modeDiv").setAttribute("style", "visibility: hidden");
         document.getElementById("staffDiv").setAttribute("style", "visibility: hidden");
+
+        console.log(Scheduler.employees);
+
         Scheduler.currentSchedule = "work";
         Scheduler.selectedIndex = -1;
         let elements = document.getElementsByClassName("timeSlot");
         for (let element of elements) {
             element.setAttribute("style","background-color: white");
         }
+        Scheduler.consolidateScheduledBlocks();
+
+        console.log(Scheduler.employees);
     }
 
     static pressEmployeeSchedules(e) {
@@ -31,6 +37,9 @@ class Button extends React.Component {
         document.getElementById("topPanel").setAttribute("style", "visibility: visible");
         document.getElementById("modeDiv").setAttribute("style", "visibility: visible");
         document.getElementById("staffDiv").setAttribute("style", "visibility: visible");
+
+        console.log(Scheduler.employees);
+
         Scheduler.mode = "markUnavailable";
         Scheduler.currentSchedule = "employees";
         if (Scheduler.employees.length > 0) {
@@ -38,6 +47,8 @@ class Button extends React.Component {
             document.getElementById("dropdown").innerHTML = Scheduler.employees[0].name;
             Scheduler.loadEmployeeSchedule();
         }
+
+        console.log(Scheduler.employees);
     }
 
     static pressSetUnavailable(e) {

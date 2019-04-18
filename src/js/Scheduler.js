@@ -24,12 +24,27 @@ class Scheduler {
             for (let element of elements) {
                 let day = element.getAttribute("day");
                 let index = element.getAttribute("index");
+
                 if (Scheduler.days[day][index] === 0) {
                     element.setAttribute("style", "background-color: white");
                 } else if (Scheduler.days[day][index] === 1) {
                     element.setAttribute("style", "background-color: green");
                 } else if (Scheduler.days[day][index] === 2) {
                     element.setAttribute("style", "background-color: red");
+                }
+            }
+        }
+    }
+
+    static consolidateScheduledBlocks() {
+        let elements = document.getElementsByClassName("timeSlot");
+        for (let element of elements) {
+            let day = element.getAttribute("day");
+            let index = element.getAttribute("index");
+
+            for (let i = 0; i < Scheduler.employees.length; i++) {
+                if (Scheduler.employees[i].schedule[day][index] === 1) {
+                    element.setAttribute("style", "background-color: green");
                 }
             }
         }
