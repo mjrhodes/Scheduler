@@ -4,7 +4,7 @@ import Scheduler from "../js/Scheduler.js";
 
 class TimeSlot extends React.Component {
     handleMouseDown(e) {
-        if (Scheduler.currentSchedule === "employees" && Scheduler.selectedIndex != -1) {
+        if (Scheduler.currentSchedule === "employees" && Scheduler.selectedIndex !== -1) {
             let day = e.target.getAttribute("day");
             let index = e.target.getAttribute("index");
             Scheduler.currentlyModifying = day;
@@ -38,12 +38,15 @@ class TimeSlot extends React.Component {
             if (Scheduler.mode === "markUnavailable") {
                 e.target.setAttribute("style", "background-color: red");
                 Scheduler.days[day][index] = 2;
+                Scheduler.employees[Scheduler.selectedIndex].schedule[day][index] = 2;
             } else if (Scheduler.mode === "markScheduled") {
                 e.target.setAttribute("style", "background-color: green");
                 Scheduler.days[day][index] = 1;
+                Scheduler.employees[Scheduler.selectedIndex].schedule[day][index] = 1;
             } else if (Scheduler.mode === "markBlank") {
                 e.target.setAttribute("style", "background-color: white");
                 Scheduler.days[day][index] = 0;
+                Scheduler.employees[Scheduler.selectedIndex].schedule[day][index] = 0;
             }
         }
     }

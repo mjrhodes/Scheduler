@@ -32,7 +32,7 @@ shade:  #21387B
   visibility: hidden;
 }
 
-#modeDiv {
+#modeDiv, #staffDiv {
   visibility: hidden;
 }
 
@@ -56,6 +56,7 @@ shade:  #21387B
           'main main main main main main main right';
   grid-gap: 10px;
   padding: 10px;
+  margin-left: 50px;
 }
 
 .buttons {
@@ -63,7 +64,7 @@ shade:  #21387B
   display: block;
 }
 
-#modeLabel {
+#modeLabel, #staffDiv {
   margin-top: 50px;
 }
 

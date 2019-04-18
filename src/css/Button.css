@@ -27,3 +27,7 @@ button {
     margin-top: 20px;
     float:right;
 }
+
+#setDisabledButton {
+    display: none;
+}
